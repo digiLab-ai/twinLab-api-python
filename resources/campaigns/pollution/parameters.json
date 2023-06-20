@@ -1,0 +1,6 @@
+{
+    "dataset_id": "pollution",
+    "inputs": ["date", "time", "direction", "speed", "temperature"],
+    "outputs": ["NO", "NO2", "NOX"],
+    "train_test_ratio": 0.8
+}
