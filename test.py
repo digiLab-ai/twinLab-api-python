@@ -10,10 +10,10 @@ campaign_id = "pollution-campaign"
 predict_path = "resources/campaign/pollution/eval.csv"
 processor = "cpu"
 
-response = api.get_versions()
+response = api.get_user()
 pprint(response)
 
-response = api.get_user()
+response = api.get_versions()
 pprint(response)
 
 response = api.list_datasets()
