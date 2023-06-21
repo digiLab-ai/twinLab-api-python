@@ -1,13 +1,15 @@
 import time
 from pprint import pprint
 
-import examples.api as api
+import api
 
-dataset_path = "resources/datasets/pollution.csv"
-dataset_id = "pollution"
-model_path = "resources/campaigns/pollution/parameters.json"
-model_id = "pollution-model"
-predict_path = "resources/campaigns/pollution/eval.csv"
+WAIT_TIME = 10  # Time for training to definitely complete [s]
+
+dataset_path = "resources/datasets/biscuits.csv"
+dataset_id = "biscuits"
+model_path = "resources/campaigns/biscuits/parameters.json"
+model_id = "biscuits-model"
+predict_path = "resources/campaigns/biscuits/eval.csv"
 processor = "cpu"
 
 response = api.get_user()
@@ -41,7 +43,8 @@ response = api.status_model(model_id)
 pprint(response)
 
 # Allow time for the model to train
-time.sleep(10)
+print(f"Waiting {WAIT_TIME}s for model to train...")
+time.sleep(WAIT_TIME)
 
 response = api.status_model(model_id)
 pprint(response)
