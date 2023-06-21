@@ -1,13 +1,13 @@
 import time
 from pprint import pprint
 
-import api
+import examples.api as api
 
 dataset_path = "resources/datasets/pollution.csv"
 dataset_id = "pollution"
-campaign_path = "resources/campaigns/pollution/parameters.json"
-campaign_id = "pollution-campaign"
-predict_path = "resources/campaign/pollution/eval.csv"
+model_path = "resources/campaigns/pollution/parameters.json"
+model_id = "pollution-model"
+predict_path = "resources/campaigns/pollution/eval.csv"
 processor = "cpu"
 
 response = api.get_user()
@@ -31,35 +31,35 @@ pprint(response)
 response = api.summarise_dataset(dataset_id)
 pprint(response)
 
-response = api.list_campaigns()
+response = api.list_models()
 pprint(response)
 
-response = api.train_campaign(campaign_path, campaign_id, processor)
+response = api.train_model(model_path, model_id, processor)
 pprint(response)
 
-response = api.status_campaign(campaign_id)
+response = api.status_model(model_id)
 pprint(response)
 
-# Allow time for the campaign to train
+# Allow time for the model to train
 time.sleep(10)
 
-response = api.status_campaign(campaign_id)
+response = api.status_model(model_id)
 pprint(response)
 
-response = api.list_campaigns()
+response = api.list_models()
 pprint(response)
 
-response = api.summarise_campaign(campaign_id)
+response = api.summarise_model(model_id)
 pprint(response)
 
-response = api.use_campaign(
-    predict_path, campaign_id, "predict", processor)
+response = api.use_model(
+    predict_path, model_id, "predict", processor)
 pprint(response)
 
-response = api.delete_campaign(campaign_id)
+response = api.delete_model(model_id)
 pprint(response)
 
-response = api.list_campaigns()
+response = api.list_models()
 pprint(response)
 
 response = api.delete_dataset(dataset_id)

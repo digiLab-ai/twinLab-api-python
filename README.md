@@ -65,38 +65,38 @@ poetry run python examples/summarise_dataset.py <dataset_id>
 poetry run python examples/summarise_dataset.py pollution
 ```
 
-## List campaigns
+## List models
 ```shell
-poetry run python examples/list_campaigns.py
+poetry run python examples/list_models.py
 ```
 
-## Train campaign
+## Train model
 ```shell
-poetry run python examples/train_campaign.py <path/to/parameters.json> <campaign_id> <processor>
-poetry run python examples/train_campaign.py resources/campaigns/pollution/parameters.json pollution-campaign cpu
+poetry run python examples/train_model.py <path/to/parameters.json> <model_id> <processor>
+poetry run python examples/train_model.py resources/models/pollution/parameters.json pollution-model cpu
 ```
 
-## Get the campaign status
+## Get the model status
 ```shell
 
 ```
 
-## Summarise campaign
+## Summarise model
 ```shell
-poetry run python examples/summarise_campaign.py <campaign_id>
-poetry run python examples/summarise_campaign.py pollution-campaign
+poetry run python examples/summarise_model.py <model_id>
+poetry run python examples/summarise_model.py pollution-model
 ```
 
-## Predict using a trained campaign
+## Predict using a trained model
 ```shell
-poetry run python examples/use_campaign.py <path/to/inputs.csv> <campaign_id> <method> <processor>
-poetry run python examples/use_campaign.py resources/campaigns/pollution/eval.csv pollution-campaign predict cpu
+poetry run python examples/use_model.py <path/to/inputs.csv> <model_id> <method> <processor>
+poetry run python examples/use_model.py resources/models/pollution/eval.csv pollution-model predict cpu
 ```
 
-## Delete campaign
+## Delete model
 ```shell
-poetry run python examples/delete_campaign.py <campaign_id>
-poetry run python examples/delete_campaign.py pollution-campaign
+poetry run python examples/delete_model.py <model_id>
+poetry run python examples/delete_model.py pollution-model
 ```
 
 ## Delete dataset
