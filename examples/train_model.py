@@ -8,7 +8,6 @@ if len(sys.argv) != 4:
     print(
         f"Usage: python {sys.argv[0]} <path/to/parameters.json> <model_id> <processor>")
     exit()
-
 filepath = sys.argv[1]
 model_id = sys.argv[2]
 processor = sys.argv[3]

@@ -50,19 +50,19 @@ poetry run python examples/list_datasets.py
 ## Upload dataset
 ```shell
 poetry run python examples/upload_dataset.py <path/to/dataset.csv> <dataset_id>
-poetry run python examples/upload_dataset.py resources/datasets/pollution.csv pollution
+poetry run python examples/upload_dataset.py resources/datasets/biscuits.csv biscuits
 ```
 
 ## View dataset
 ```shell
 poetry run python examples/view_dataset.py <dataset_id>
-poetry run python examples/view_dataset.py pollution
+poetry run python examples/view_dataset.py biscuits
 ```
 
 ## Summarise a dataset
 ```shell
 poetry run python examples/summarise_dataset.py <dataset_id>
-poetry run python examples/summarise_dataset.py pollution
+poetry run python examples/summarise_dataset.py biscuits
 ```
 
 ## List models
@@ -73,7 +73,7 @@ poetry run python examples/list_models.py
 ## Train model
 ```shell
 poetry run python examples/train_model.py <path/to/parameters.json> <model_id> <processor>
-poetry run python examples/train_model.py resources/models/pollution/parameters.json pollution-model cpu
+poetry run python examples/train_model.py resources/campaigns/biscuits/parameters.json biscuits-model cpu
 ```
 
 ## Get the model status
@@ -84,23 +84,23 @@ poetry run python examples/train_model.py resources/models/pollution/parameters.
 ## Summarise model
 ```shell
 poetry run python examples/summarise_model.py <model_id>
-poetry run python examples/summarise_model.py pollution-model
+poetry run python examples/summarise_model.py biscuits-model
 ```
 
 ## Predict using a trained model
 ```shell
 poetry run python examples/use_model.py <path/to/inputs.csv> <model_id> <method> <processor>
-poetry run python examples/use_model.py resources/models/pollution/eval.csv pollution-model predict cpu
+poetry run python examples/use_model.py resources/campaigns/biscuits/eval.csv biscuits-model predict cpu
 ```
 
 ## Delete model
 ```shell
 poetry run python examples/delete_model.py <model_id>
-poetry run python examples/delete_model.py pollution-model
+poetry run python examples/delete_model.py biscuits-model
 ```
 
 ## Delete dataset
 ```shell
 poetry run python examples/delete_dataset.py <dataset_id>
-poetry run python examples/delete_dataset.py pollution
+poetry run python examples/delete_dataset.py biscuits
 ```
